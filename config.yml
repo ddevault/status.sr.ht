@@ -76,27 +76,13 @@ params:
   # For help, see the wiki:
   # https://github.com/mistermantas/cstate/wiki/Customization
   systems:
-    -
-      name: git.sr.ht
-      description: git hosting
-    -
-      name: builds.sr.ht
-      description: build service
-    -
-      name: todo.sr.ht
-      description: bug tracking
-    -
-      name: lists.sr.ht
-      description: mailing lists
-    -
-      name: man.sr.ht
-      description: manual & wikis
-    -
-      name: dispatch.sr.ht
-      description: task automation
-    -
-      name: meta.sr.ht
-      description: account & security
+    - name: git.sr.ht
+    - name: builds.sr.ht
+    - name: todo.sr.ht
+    - name: lists.sr.ht
+    - name: man.sr.ht
+    - name: dispatch.sr.ht
+    - name: meta.sr.ht
 
   # What header design should we use?
   #
