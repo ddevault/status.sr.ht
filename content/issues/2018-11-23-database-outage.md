@@ -8,6 +8,7 @@ severity: down
 affected:
   - builds.sr.ht
   - git.sr.ht
+  - lists.sr.ht
   - meta.sr.ht
 section: issue
 ---
