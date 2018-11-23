@@ -1,8 +1,8 @@
 ---
 title: Database RAID failure
 date: 2018-11-23 18:00:00
-resolved: false
-resolvedWhen: 2018-05-25 04:40:00
+resolved: true
+resolvedWhen: 2018-11-23 23:27:00
 # down, disrupted, notice
 severity: down
 affected:
@@ -12,6 +12,10 @@ affected:
   - meta.sr.ht
 section: issue
 ---
+
+**Service restored**:
+The database server has been returned to service.
+{{< track "2018-11-23 23:27:00" >}}
 
 **Restoring service**:
 The RAID rebuild completed successfully and the server is on its way back to the
