@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" class="no-js">
+  <head>
+    <!-- Basics -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Data -->
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+    <title>{{ if eq .Title .Site.Title }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ .Hugo.Generator }}
+    <meta name="theme-color" content="#{{ .Site.Params.brand }}">
+    <script>
+    var themeBrandColor = '#{{ .Site.Params.brand }}';
+    var themeOkColor = '#{{ .Site.Params.ok }}';
+    var themeNoticeColor = '#{{ .Site.Params.notice }}';
+    var themeDisruptedColor = '#{{ .Site.Params.disrupted }}';
+    var themeDownColor = '#{{ .Site.Params.down }}';
+    </script>
+    <!-- Sources -->
+    <style>
+    /**
+     * Color palette
+     *
+     * Defaults:
+     * white: #fff;
+     * whitesmoke: #f5f5f5;
+     * forestgreen: #228B22;
+     * crimson: #DC143C;
+     * darkorange: #FF8C00;
+     * slategray: #708090;
+     *
+     */
+
+    html, body {
+      margin: 0;
+      background: #fff;
+      color: #444;
+      font: 100%/1.5 BlinkMacSystemFont, -apple-system, "San Francisco Text", "Roboto", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+      box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid #ccc;
+      margin: 24px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      border-bottom: 1px dotted currentColor;
+    }
+
+    a.no-underline { border-bottom: 0; }
+
+    a:hover { border-bottom-style: solid; }
+    a:active { position: relative; top: 2px; }
+
+    h2 { font-size: 26px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 18px; }
+
+    .headline { font-size: 20px; }
+    .bold { color: #000; }
+
+    h2, h4 {
+      font-weight: normal;
+      color: #000;
+    }
+
+    h3 {
+      margin: 0;
+      color: #000;
+    }
+
+    .date {
+      margin-bottom: 0;
+      color: #666;
+      font-variant: small-caps;
+    }
+
+    .faded {
+      color: #999;
+    }
+
+    .header {
+      padding: 8px 0;
+      background: #{{ .Site.Params.brand }};
+    }
+
+    .header a {
+      color: #fff;
+      font-size: 14px;
+      font-variant: small-caps;
+    }
+
+    .header--large { padding: 16px; }
+    .header--large a { font-size: 20px; }
+
+    img {
+      border: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .contain {
+      max-width: 640px;
+      margin: 16px auto;
+      padding: 16px;
+    }
+
+    .contain--more {
+      max-width: 480px;
+    }
+
+    .center { text-align: center; }
+    .right { text-align: right; }
+    .padding-s { padding: 6px; }
+    .padding { padding: 12px; }
+
+    .summary {
+      padding: 16px;
+      color: #fff;
+    }
+
+    .summary__date {
+      display: block;
+      cursor: pointer;
+    }
+
+    .summary__date:hover {
+      color: #ccc;
+    }
+
+    .summary__date:hover:after {
+      content: ' ⟳ ';
+      color: #fff;
+    }
+
+    .components {
+      border: 2px solid #ddd;
+      border-bottom: 0;
+    }
+
+    .component {
+      color: #000;
+      padding: 16px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .description { cursor: pointer; position: relative; }
+    .description__text { display: none; }
+    .description:hover .description__text,
+    .description:active .description__text  {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 32px;
+      background: #181818;
+      color: #fff;
+      z-index: 50;
+      padding: 8px;
+      border: 2px solid #242424;
+      font-size: 14px;
+      color: #ccc;
+      width: 1000%;
+      height: auto;
+    }
+
+    @media (max-width: 640px) {
+      .description:hover .description__text,
+      .description:active .description__text {
+        width: 50vw;
+      }
+    }
+
+    .ok { color: #{{ .Site.Params.ok }}; }
+    .error { color: #{{ .Site.Params.down }}; }
+
+    .footer {
+      padding: 10px;
+      background: #f5f5f5;
+    }
+
+    .copyright {
+      display: block;
+      font-variant: small-caps;
+    }
+
+    .copyright a, a.logo {
+      border-bottom: 0;
+    }
+
+    .logo img {
+      height: auto;
+      width: 320px;
+    }
+
+    .logo--small img {
+      height: auto;
+      width: 160px;
+    }
+
+    .tabs { border-bottom: 1px solid #ccc; }
+    .tabs--inner { padding: 0 16px; margin: 0 auto; }
+    a.tab { display: inline-table; }
+    .tab--current {
+      border: 1px solid #ccc;
+      border-bottom-color: #fff;
+      padding: 12px 18px;
+      position: relative;
+      top: 1px;
+    }
+
+    .tab--other {
+      border: 0;
+      padding: 12px 18px;
+      position: relative;
+      top: 1px;
+      color: #aaa;
+    }
+    .tab--other:hover { color: #000; }
+
+    .article {
+      padding-bottom: 20px;
+    }
+
+    .article h3 { line-height: 1.25; }
+    .article h3 a { border: 0; }
+    .article h3 a:hover { border-bottom: 1px solid currentColor; }
+
+
+    /**
+     * Specific to the status
+     */
+
+    .status-ok .summary { background: #{{ .Site.Params.ok }}; }
+    .status-disrupted .summary, .change-header-color.status-disrupted .header { background: #{{ .Site.Params.disrupted }}; }
+    .status-down .summary, .change-header-color.status-down .header { background: #{{ .Site.Params.down }}; }
+    .status-notice .summary, .change-header-color.status-notice .header { background: #{{ .Site.Params.notice }}; }
+
+    .announcement-box .padding {
+      padding: 16px;
+      border-bottom: 1px solid currentColor;
+    }
+
+    .status-disrupted .announcement-box .padding { border-bottom-color: #{{ .Site.Params.disrupted }}; }
+    .status-down .announcement-box .padding { border-bottom-color: #{{ .Site.Params.down }}; }
+    .status-notice .announcement-box .padding { border-bottom-color: #{{ .Site.Params.notice }}; }
+
+    .status-ok .announcement-box { border: 2px solid #{{ .Site.Params.ok }}; }
+    .status-disrupted .announcement-box { border: 2px solid #{{ .Site.Params.disrupted }}; }
+    .status-down .announcement-box { border: 2px solid #{{ .Site.Params.down }}; }
+    .status-notice .announcement-box { border: 2px solid #{{ .Site.Params.notice }}; }
+
+    .status-homepage .announcement-box { border-bottom-width: 1px; }
+
+
+    /**
+     * Dynamically show individual component statuses
+     */
+
+    .component-status { float: right; }
+    .component[data-status="ok"] .component-status { color: #{{ .Site.Params.ok }};; }
+    .component[data-status="disrupted"] .component-status { color: #{{ .Site.Params.disrupted }};; }
+    .component[data-status="down"] .component-status { color: #{{ .Site.Params.down }};; }
+    .component[data-status="notice"] .component-status { color: #{{ .Site.Params.notice }};; }
+
+    /**
+     * Responsiveness
+     */
+
+    @media (min-width: 640px) {
+      .summary__date {
+        float: right;
+        display: inline;
+      }
+    }
+
+    ::selection { background: #B4D5FF; }
+    html { -webkit-tap-highlight-color: rgba(0,0,0, 0.25); }
+    </style>
+    {{ if .Site.Params.enableCustomHTML }}
+      {{ partial "custom/meta" . }}
+    {{ end }}
+  </head>

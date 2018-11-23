@@ -34,7 +34,7 @@
 #    or double quotation marks.
 #
 # If you have problems, create an issue on GitHub:
-# https://github.com/mistermantas/cstate/issues
+# https://github.com/cstate/cstate/issues
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -44,7 +44,7 @@
 
 # What is your status page called?
 # Shows up in the browser bar and meta tags
-title: sr.ht status
+title: Eggsample App Status
 
 # What language is this site using?
 # Only alters the html[lang] attribute
@@ -74,28 +74,29 @@ params:
   # change the amount of components.
   #
   # For help, see the wiki:
-  # https://github.com/mistermantas/cstate/wiki/Customization
+  # https://github.com/cstate/cstate/wiki/Customization
   systems:
-    - name: git.sr.ht
-    - name: builds.sr.ht
-    - name: todo.sr.ht
-    - name: lists.sr.ht
-    - name: man.sr.ht
-    - name: dispatch.sr.ht
-    - name: meta.sr.ht
+    -
+      name: Gateway
+    -
+      name: API
+      description: The guts of the application.
+    -
+      name: Media Proxy
+      description: This is the service responsible for serving images, audio, and video. It is reliant on our CDN.
 
   # What header design should we use?
   #
   # Default: true
   # BOOLEAN; `true`, `false`
-  useLargeHeaderDesign: true
+  useLargeHeaderDesign: false
 
   # Should we show the logo or the title
   # of the status page?
   #
   # Default: false
   # BOOLEAN; `true`, `false`
-  useLogo: false
+  useLogo: true
 
   # Where is the logo located, if one is
   # present at all?
@@ -111,9 +112,7 @@ params:
   # in the footer and meta tags.
   #
   # Default: We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.
-  description: >
-    We continuously monitor the status of our services and if there are any
-    interruptions, a note will be posted here.
+  description: We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.
 
   # Tabs on homepage
   # Uncomment to enable.
@@ -199,7 +198,7 @@ buildFuture: true
 # These options affect the core of cState.
 # Please do not change them if you do not
 # know what you are doing.
-theme: _cstate
+theme: cstate
 
 # This option tells cState what version
 # your config file is using.

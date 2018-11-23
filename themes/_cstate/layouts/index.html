@@ -1,0 +1,191 @@
+{{ partial "meta" . }}
+
+{{ $incidents := where .Site.RegularPages "Params.section" "issue" }}
+{{ $active := where $incidents "Params.resolved" "=" false }}
+
+{{ $isNotice := where $active "Params.severity" "=" "notice" }}
+{{ $isDisrupted := where $active "Params.severity" "=" "disrupted" }}
+{{ $isDown := where $active "Params.severity" "=" "down" }}
+
+  <body class="status-homepage status-{{ if $isDown }}down{{ else }}{{ if $isDisrupted}}disrupted{{ else }}{{ if $isNotice }}notice{{ else }}ok{{ end }}{{ end }}{{ end }} {{ if not .Site.Params.alwaysKeepBrandColor }}change-header-color{{ end }}">
+    {{ partial "header" . }}
+
+    <!-- Main -->
+    <div class="contain">
+      <!-- Main info -->
+      <div class="summary">
+        <strong>
+          {{ if $isDown }}
+            Experiencing major issues
+          {{ else }}
+          {{ if $isDisrupted }}
+            Experiencing disruptions
+          {{ else }}
+          {{ if $isNotice }}
+            Please read announcement
+          {{ else }}
+            All systems operational
+          {{ end }}{{ end }}{{ end }}
+        </strong>
+
+        <span class="summary__date" onclick="location.reload()"></span>
+      </div>
+
+      {{ if $active }}
+      <div class="announcement-box">
+        {{ range $active }}
+          <div class="padding">
+            <p><strong>{{ .Title }}</strong></p>
+            {{ .Content | safeHTML | truncate 500 "…" }}
+            <p><a href="{{ .Permalink }}">Continue reading</a></p>
+          </div>
+        {{ else }}{{ end }}
+      </div>
+      {{ end }}
+
+      {{ if .Site.Params.autoRefresh }}
+      <div class="faded right">
+        <small><em>We will try to refresh every 5 minutes</em></small>
+      </div>
+      <div class="padding-s"></div>
+      {{ else }}
+      <div class="padding"></div>
+      {{ end }}
+
+      <!-- Individual info -->
+      <div class="components">
+        {{ $systems := .Site.Params.systems }}
+        {{ range $systems }}
+          {{ $activeComponentIssues := where $active "Params.affected" "intersect" (slice .name) }}
+
+          {{ $thisIsNotice := where $activeComponentIssues "Params.severity" "=" "notice" }}
+          {{ $thisIsDisrupted := where $activeComponentIssues "Params.severity" "=" "disrupted" }}
+          {{ $thisIsDown := where $activeComponentIssues "Params.severity" "=" "down" }}
+
+          <div class="component" data-status="{{ if $thisIsDown }}down{{ else }}{{ if $thisIsDisrupted }}disrupted{{ else }}{{ if $thisIsNotice }}notice{{ else }}ok{{ end }}{{ end }}{{ end }}">
+            {{ $this := .name }}
+            {{ .name }}
+
+            {{ with .description }}
+              <span class="description">
+                &nbsp; <span class="faded">(?)</span>
+
+                <span class="description__text">
+                  {{ . }}
+                </span>
+              </span>
+            {{ end }}
+
+            <span class="component-status">
+              {{ if $thisIsDown }}
+                Down
+              {{ else }}
+              {{ if $thisIsDisrupted }}
+                Disrupted
+              {{ else }}
+              {{ if $thisIsNotice }}
+                Maintenance
+              {{ else }}
+                Operational
+              {{ end }}{{ end }}{{ end }}
+            </span>
+
+            {{ with .partial }}
+            <div>
+              {{ partial . . }}
+            </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+
+    {{ if .Site.Params.enableCustomHTML }}
+      {{ partial "custom/homepage-summary" . }}
+    {{ end }}
+    <!-- End main -->
+  </div>
+
+  {{ if .Site.Params.customTabs }}
+  <div class="tabs">
+    <div class="contain tabs--inner">
+      <a href="/#incidents" class="tab tab--current">
+        Incidents
+      </a>
+
+      {{ range .Site.Params.customTabs }}
+       <a href="{{ .link }}" class="tab tab--other">
+         {{ .name }}
+       </a>
+     {{ end }}
+    </div>
+  </div>
+  {{ else }}
+  <div class="contain">
+    <h2 class="center">Incident history</h2>
+    <hr>
+  </div>
+  {{ end }}
+
+
+  <div class="contain" id="incidents">
+    <div class="padding"></div>
+    {{ if not $incidents }}
+      <div class="padding"></div>
+      <h3>Is it the calm before the storm?</h3>
+      <p>This status page has no logged incidents. This may be because the status page owner (or owners) have recently set up their status page, have had no downtime, or have not logged any downtime.</p>
+      <div class="padding"></div>
+      <div class="padding"></div>
+      <div class="padding"></div>
+    {{ else }}
+      {{ $paginator := .Paginate $incidents .Site.Params.incidentPostsPerPage }}
+      {{ range $paginator.Pages }}
+        {{ .Render "issue" }}
+      {{ end }}
+
+      <!-- If there are more than 2 pages, show pagination -->
+      {{ if gt $paginator.TotalPages 1 }}
+        <hr>
+
+        <div class="center">
+          {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}#incidents">
+              ⭠ &nbsp;
+              Previuos
+            </a>
+          {{ else }}
+            <span class="faded">
+              ⭠ &nbsp;
+              Previuos
+            </span>
+          {{ end }}
+
+
+          &nbsp; &nbsp;
+          {{ $paginator.PageNumber }}
+          /
+          {{ $paginator.TotalPages }}
+          &nbsp; &nbsp;
+
+
+          {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}#incidents">
+              Next &nbsp;
+              ⭢
+            </a>
+          {{ else }}
+            <span class="faded">
+              Next &nbsp;
+              ⭢
+            </span>
+          {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+
+
+
+  {{ partial "js" . }}
+  {{ partial "footer" . }}
+  </body>
+</html>

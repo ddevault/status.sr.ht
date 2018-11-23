@@ -1,0 +1,47 @@
+# This is the main configuration file for Netlify CMS.
+# Netlify CMS is used as the admin panel for cState.
+#
+# While some settings here can be kept as is, you may
+# want to change some for a more customized solution.
+#
+# You can look at what each option does and how to
+# toggle between them on the Netlify CMS repo docs:
+#
+# https://github.com/netlify/netlify-cms/blob/master/docs/quick-start.md
+
+backend:
+  name: git-gateway
+media_folder: "static/img"
+public_folder: "/img"
+display_url: /
+
+# Do not change this!
+collections:
+  - name: "issue"
+    label: "Incidents"
+    label_singular: "Incident"
+    description: "Welcome to the cState admin panel! Here you can create new incidents or manage existing ones. Go ahead and give it a shot."
+    folder: "content/issues"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Mark as incident", name: "section", widget: "hidden", default: "issue"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Start date & time (your time)", name: "date", widget: "datetime"}
+      - {label: "Mark as resolved", name: "resolved", widget: "boolean", required: false}
+      - {label: "End date & time (your time)", name: "resolvedWhen", widget: "datetime", required: false}
+      - label: "Affected systems (use exact name, separated by commas)"
+        name: "Affected"
+        widget: "list"
+        required: false
+      - label: "Severity"
+        name: "severity"
+        widget: "select"
+        options:
+          - { label: "High (Down)", value: "down" }
+          - { label: "Medium (Disrupted)", value: "disrupted" }
+          - { label: "Low (Announcement)", value: "notice" }
+      - label: "Markdown body (sequence of events, description, post-mortem)"
+        name: "body"
+        widget: "markdown"
+        default: "*Investigating* - We are investigating a potential issue that might affect the uptime of one our of services. We are sorry for any inconvenience this may cause you. This incident post will be updated once we have more information."

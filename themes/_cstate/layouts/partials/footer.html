@@ -1,0 +1,20 @@
+{{ if .Site.Params.enableCustomHTML }}
+  {{ partial "custom/above-footer" . }}
+{{ end }}
+
+<div class="footer">
+  <div class="contain">
+    <p><strong>{{ now.Year }} &copy; {{ .Site.Title }}</strong>
+       &nbsp; • &nbsp; <a href="#">Back to top</a>
+    </p>
+
+    <p>{{ .Site.Params.description }}</p>
+
+    <!-- Please keep this one around to help cState grow <3 -->
+    <small class="copyright faded">Powered by <a href="https://github.com/cstate/cstate">cState v2.0.1</a></small>
+  </div>
+</div>
+
+{{ if .Site.Params.enableCustomHTML }}
+  {{ partial "custom/below-footer" . }}
+{{ end }}
