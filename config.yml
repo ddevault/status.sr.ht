@@ -44,7 +44,7 @@
 
 # What is your status page called?
 # Shows up in the browser bar and meta tags
-title: Eggsample App Status
+title: sr.ht status
 
 # What language is this site using?
 # Only alters the html[lang] attribute
@@ -77,26 +77,39 @@ params:
   # https://github.com/mistermantas/cstate/wiki/Customization
   systems:
     -
-      name: Gateway
+      name: git.sr.ht
+      description: git hosting
     -
-      name: API
-      description: The guts of the application.
+      name: builds.sr.ht
+      description: build service
     -
-      name: Media Proxy
-      description: This is the service responsible for serving images, audio, and video. It is reliant on our CDN.
+      name: todo.sr.ht
+      description: bug tracking
+    -
+      name: lists.sr.ht
+      description: mailing lists
+    -
+      name: man.sr.ht
+      description: manual & wikis
+    -
+      name: dispatch.sr.ht
+      description: task automation
+    -
+      name: meta.sr.ht
+      description: account & security
 
   # What header design should we use?
   #
   # Default: true
   # BOOLEAN; `true`, `false`
-  useLargeHeaderDesign: false
+  useLargeHeaderDesign: true
 
   # Should we show the logo or the title
   # of the status page?
   #
   # Default: false
   # BOOLEAN; `true`, `false`
-  useLogo: true
+  useLogo: false
 
   # Where is the logo located, if one is
   # present at all?
@@ -112,7 +125,9 @@ params:
   # in the footer and meta tags.
   #
   # Default: We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.
-  description: We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.
+  description: >
+    We continuously monitor the status of our services and if there are any
+    interruptions, a note will be posted here.
 
   # Tabs on homepage
   # Uncomment to enable.
