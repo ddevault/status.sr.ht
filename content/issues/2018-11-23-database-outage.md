@@ -13,13 +13,18 @@ affected:
 section: issue
 ---
 
-*Resolving*
+**Restoring service**:
+The RAID rebuild completed successfully and the server is on its way back to the
+datacenter to be entered back into service.
+{{< track "2018-11-23 22:25:00" >}}
+
+**Resolving**:
 An issue with one of the hard drives on one of our database servers was
 discovered, resulting in a total outage for this server. The RAID array is being
 rebuilt and service is expected to be restored within a few hours.
 {{< track "2018-11-23 20:00:00" >}}
 
-*Investigating*
+**Investigating**:
 One of our database servers has gone offline and is unresponsive. The issue will
 require manual intervention at the datacenter, but the NOC is slow to respond
 during the holiday weekend. Once we gain access to the server, an update will be
