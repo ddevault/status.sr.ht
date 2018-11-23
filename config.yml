@@ -112,8 +112,7 @@ params:
   #
   # Default: We continuously monitor the status of our services and if there are any interruptions, a note will be posted here.
   description: >
-    We continuously monitor the status of our services and if there are any
-    interruptions, a note will be posted here.
+    This page is updated by a human, who has to sleep from time to time.
 
   # Tabs on homepage
   # Uncomment to enable.
