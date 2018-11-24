@@ -13,7 +13,13 @@ affected:
 section: issue
 ---
 
-**Reopened**
+**Replacing the database server**:
+The database server has been taken out of service for maintenance, and in the
+meantime I'm provisioning a replacement. I believe that there has been no data
+loss.
+{{< track "2018-11-24 22:06:00" >}}
+
+**Reopened**:
 Failures are back up. Investigating.
 {{< track "2018-11-24 21:03:00" >}}
 
