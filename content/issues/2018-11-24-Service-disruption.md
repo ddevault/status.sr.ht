@@ -4,7 +4,7 @@ date: 2018-11-24 19:39:00
 resolved: false
 resolvedWhen: 2018-11-24 20:42:00
 # down, disrupted, notice
-severity: disrupted
+severity: down
 affected:
   - builds.sr.ht
   - git.sr.ht
