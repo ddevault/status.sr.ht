@@ -1,8 +1,8 @@
 ---
 title: Service disruption
 date: 2018-11-24 19:39:00
-resolved: false
-resolvedWhen: 2018-11-23 23:27:00
+resolved: true
+resolvedWhen: 2018-11-24 20:42:00
 # down, disrupted, notice
 severity: disrupted
 affected:
@@ -12,6 +12,11 @@ affected:
   - meta.sr.ht
 section: issue
 ---
+
+**Resolved**:
+The issue has been resolved, and we're monitoring the system for more
+information.
+{{< track "2018-11-24 20:42:00" >}}
 
 **Investigating**:
 The same database server causing issues yesterday is causing more problems
