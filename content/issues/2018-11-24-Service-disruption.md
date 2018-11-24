@@ -1,7 +1,7 @@
 ---
 title: Service disruption
 date: 2018-11-24 19:39:00
-resolved: true
+resolved: false
 resolvedWhen: 2018-11-24 20:42:00
 # down, disrupted, notice
 severity: disrupted
@@ -12,6 +12,10 @@ affected:
   - meta.sr.ht
 section: issue
 ---
+
+**Reopened**
+Failures are back up. Investigating.
+{{< track "2018-11-24 21:03:00" >}}
 
 **Resolved**:
 The issue has been resolved, and we're monitoring the system for more
