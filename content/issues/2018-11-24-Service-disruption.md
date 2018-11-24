@@ -4,14 +4,17 @@ date: 2018-11-24 19:39:00
 resolved: false
 resolvedWhen: 2018-11-24 20:42:00
 # down, disrupted, notice
-severity: down
+severity: disrupted
 affected:
   - builds.sr.ht
-  - git.sr.ht
-  - lists.sr.ht
-  - meta.sr.ht
 section: issue
 ---
+
+**Temporary database server provisioned**:
+Full service has been restored to all services except for builds.sr.ht, which
+requires the provisioning of a new build slave. Until then no builds will be
+run.
+{{< track "2018-11-24 22:34:00" >}}
 
 **Replacing the database server**:
 The database server has been taken out of service for maintenance, and in the
