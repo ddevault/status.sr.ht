@@ -10,6 +10,11 @@ affected:
 section: issue
 ---
 
+**Alpine builds now available**:
+The next step is to start pulling build images down to the new build runner.
+Currently Alpine is available and Arch is being worked on next.
+{{< track "2018-11-25 17:01:00" >}}
+
 **Restoring builds service**:
 Work is ongoing to provision a new build host. Service is expected to be
 restored within a few hours.
