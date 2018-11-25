@@ -10,6 +10,11 @@ affected:
 section: issue
 ---
 
+**Restoring builds service**:
+Work is ongoing to provision a new build host. Service is expected to be
+restored within a few hours.
+{{< track "2018-11-25 15:23:00" >}}
+
 **Temporary database server provisioned**:
 Full service has been restored to all services except for builds.sr.ht, which
 requires the provisioning of a new build slave. Until then no builds will be
