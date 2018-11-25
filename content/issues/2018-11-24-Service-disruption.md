@@ -10,6 +10,10 @@ affected:
 section: issue
 ---
 
+**Arch Linux builds now available**:
+Arch is available and Debian is coming.
+{{< track "2018-11-25 18:01:00" >}}
+
 **Alpine builds now available**:
 The next step is to start pulling build images down to the new build runner.
 Currently Alpine is available and Arch is being worked on next.
