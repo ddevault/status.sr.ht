@@ -1,7 +1,7 @@
 ---
 title: Service disruption
 date: 2018-11-24 19:39:00
-resolved: false
+resolved: true
 resolvedWhen: 2018-11-24 20:42:00
 # down, disrupted, notice
 severity: disrupted
@@ -9,6 +9,10 @@ affected:
   - builds.sr.ht
 section: issue
 ---
+
+**Debian & FreeBSD builds now available**:
+Full service has been restored.
+{{< track "2018-11-27 03:54:00" >}}
 
 **Arch Linux builds now available**:
 Arch is available and Debian is coming.
