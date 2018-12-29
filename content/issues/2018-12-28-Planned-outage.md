@@ -1,8 +1,8 @@
 ---
 title: Planned login outage
-date: 2018-12-29 00:01:00
-resolved: false
-resolvedWhen:
+date: 2018-12-29 01:00:00
+resolved: true
+resolvedWhen: 2018-12-29 03:00:00
 # down, disrupted, notice
 severity: disrupted
 affected:
@@ -14,6 +14,11 @@ affected:
   - man.sr.ht
 section: issue
 ---
+
+**Maintenance complete**:
+We have completed this period of maintenance, sr.ht has been restored to full
+service.
+{{< track "2018-12-29 03:00:00" >}}
 
 **Partial outage during planned maintenance**:
 A planned service upgrade requires logins to be intermittedly for some sr.ht
