@@ -2,7 +2,7 @@
 title: Planned maintenance on sr.ht
 date: 2019-02-18 12:00:00
 resolved: false
-resolvedWhen: 2018-12-29 03:00:00
+resolvedWhen: 2019-02-08 20:00:00
 # down, disrupted, notice
 severity: disrupted
 affected:
@@ -15,6 +15,11 @@ affected:
   - meta.sr.ht
 section: issue
 ---
+
+**Maintenance complete**:
+Everything appears to be in good working order.
+{{< track "2019-02-18 20:00:00" >}}
+
 
 **Upcoming planned maintenance**:
 We're doing planned maintenance on Monday that will cause sporadic outages
