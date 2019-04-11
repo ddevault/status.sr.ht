@@ -1,7 +1,7 @@
 ---
 title: Planned maintenance on sr.ht
 date: 2019-02-18 12:00:00
-resolved: false
+resolved: true
 resolvedWhen: 2019-02-08 20:00:00
 # down, disrupted, notice
 severity: disrupted
