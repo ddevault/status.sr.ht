@@ -1,8 +1,8 @@
 ---
 title: Major DNS outage
 date: 2019-09-29 18:00:00
-resolved: false
-resolvedWhen:
+resolved: true
+resolvedWhen: 2019-09-29 21:45:00
 # down, disrupted, notice
 severity: disrupted
 affected:
@@ -17,6 +17,11 @@ affected:
   - dispatch.sr.ht
 section: issue
 ---
+
+**Resolved**
+The issue has been fixed. It may take time for DNS updates to propegate to your
+local server.
+{{< track "2019-09-29 21:45:00" >}}
 
 **Working on the issue**
 We have reached support and they've rolled back the changes. We're monitoring
