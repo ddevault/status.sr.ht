@@ -83,6 +83,7 @@ params:
     - name: man.sr.ht
     - name: dispatch.sr.ht
     - name: meta.sr.ht
+    - name: paste.sr.ht
 
   # What header design should we use?
   #
