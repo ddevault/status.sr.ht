@@ -4,7 +4,7 @@ date: 2019-09-29 18:00:00
 resolved: false
 resolvedWhen:
 # down, disrupted, notice
-severity: down
+severity: disrupted
 affected:
   - builds.sr.ht
   - git.sr.ht
@@ -13,6 +13,8 @@ affected:
   - todo.sr.ht
   - hg.sr.ht
   - paste.sr.ht
+  - man.sr.ht
+  - dispatch.sr.ht
 section: issue
 ---
 
