@@ -18,6 +18,11 @@ affected:
 section: issue
 ---
 
+**Working on the issue**
+We have reached support and they've rolled back the changes. We're monitoring
+our services to make sure the trasition occurs smoothly.
+{{< track "2019-09-29 21:00:00" >}}
+
 **No response**
 We are still waiting for an update from our registrar.
 {{< track "2019-09-29 20:00:00" >}}
