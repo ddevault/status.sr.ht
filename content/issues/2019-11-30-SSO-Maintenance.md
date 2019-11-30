@@ -1,8 +1,8 @@
 ---
 title: Intermittent outages during maintenance
 date: 2019-11-30 15:00:00
-resolved: false
-resolvedWhen: 2019-11-15 20:08:00
+resolved: true
+resolvedWhen: 2019-11-30 15:45:00
 # down, disrupted, notice
 severity: disrupted
 affected:
@@ -17,6 +17,11 @@ affected:
   - dispatch.sr.ht
 section: issue
 ---
+
+**Deployments complete**:
+The deployment has been completed for all services and no issues have been
+found. Service should be operating normally.
+{{< track "2019-11-30 15:45:00" >}}
 
 **Ongoing deployment causing service disruption**:
 We are currently deploying a major change in the Sourcehut architecture, which
