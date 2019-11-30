@@ -14,6 +14,7 @@ affected:
   - builds.sr.ht
   - man.sr.ht
   - paste.sr.ht
+  - dispatch.sr.ht
 section: issue
 ---
 
