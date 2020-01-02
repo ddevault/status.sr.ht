@@ -4,7 +4,7 @@ date: 2020-01-08 16:00:00
 resolved: false
 resolvedWhen:
 # down, disrupted, notice
-severity: down
+severity: notice
 affected:
   - meta.sr.ht
   - man.sr.ht
