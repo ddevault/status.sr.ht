@@ -4,11 +4,14 @@
     functions = "functions"
 
 [build.environment]
-    HUGO_VERSION = "0.41"
+    HUGO_VERSION = "0.48"
 
 [context.production.environment]
     HUGO_ENV = "production"
     NODE_ENV = "production"
 
 [context.deploy-preview]
-    command = "hugo"
+    command = "hugo -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+    command = "hugo -b $DEPLOY_PRIME_URL"
