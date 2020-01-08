@@ -3,6 +3,7 @@ title: Planned outage for all services
 date: 2020-01-08 16:00:00
 resolved: false
 resolvedWhen:
+severity: down
 affected:
   - meta.sr.ht
   - man.sr.ht
@@ -14,8 +15,11 @@ affected:
   - lists.sr.ht
   - dispatch.sr.ht
 section: issue
-informational: true
 ---
+
+**Maintenance has begun**:
+This maintenance is now underway.
+{{< track "2020-01-08 16:00:00" >}}
 
 **Planned maintenance on January 8th will cause a total service outage**:
 We have scheduled maintenance for next Wednesday at 16:00 UTC to perform normal
