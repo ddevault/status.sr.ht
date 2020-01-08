@@ -2,7 +2,7 @@
 title: Planned outage for all services
 date: 2020-01-08 16:00:00
 resolved: true
-resolvedWhen: 2020-01-08 16:30 UTC
+resolvedWhen: 2020-01-08 16:30:00
 severity: down
 affected:
   - meta.sr.ht
