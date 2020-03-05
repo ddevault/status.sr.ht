@@ -3,7 +3,8 @@ title: Planned outage for all services
 date: 2020-03-11 16:00:00
 resolved: false
 resolvedWhen:
-severity: disrupted
+# TODO: update to disrupted
+severity: notice
 affected:
   - meta.sr.ht
   - man.sr.ht
