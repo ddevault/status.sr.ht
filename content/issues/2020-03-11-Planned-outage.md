@@ -3,8 +3,7 @@ title: Planned outage for all services
 date: 2020-03-11 16:00:00
 resolved: false
 resolvedWhen:
-# TODO: update to disrupted
-severity: notice
+severity: disrupted
 affected:
   - meta.sr.ht
   - man.sr.ht
@@ -17,6 +16,9 @@ affected:
   - dispatch.sr.ht
 section: issue
 ---
+
+**Planned maintenance is underway**
+{{< track "2020-03-11 16:00:00" >}}
 
 **Planned maintenance on March 11th will cause intermittent outages**:
 Planned maintenance will affect all services, causing intermittent outages that
