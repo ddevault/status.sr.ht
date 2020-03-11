@@ -1,7 +1,7 @@
 ---
 title: Planned outage for all services
 date: 2020-03-11 16:00:00
-resolved: false
+resolved: true
 resolvedWhen:
 severity: disrupted
 affected:
@@ -16,6 +16,9 @@ affected:
   - dispatch.sr.ht
 section: issue
 ---
+
+**Planned maintenance is complete**. There may be some residual issues.
+{{< track "2020-03-11 18:00:00" >}}
 
 **Planned maintenance is underway**
 {{< track "2020-03-11 16:00:00" >}}
