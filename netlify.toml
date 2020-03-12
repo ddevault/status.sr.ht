@@ -5,6 +5,7 @@
 
 [build.environment]
     HUGO_VERSION = "0.67.0"
+    GO_VERSION = "1.14"
 
 [context.production.environment]
     HUGO_ENV = "production"
