@@ -1,8 +1,8 @@
 ---
 title: Planned outage for all services
 date: 2020-06-15 18:00:00
-resolved: false
-resolvedWhen: 
+resolved: true
+resolvedWhen: 2020-06-15 19:07:00
 severity: disrupted
 affected:
   - meta.sr.ht
@@ -16,6 +16,9 @@ affected:
   - dispatch.sr.ht
 section: issue
 ---
+
+**Planned maintenance is complete.**
+{{< track "2020-06-15 19:07:00" >}}
 
 **Planned maintenance is underway.**
 {{< track "2020-06-15 18:00:00" >}}
