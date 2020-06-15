@@ -17,7 +17,7 @@ affected:
 section: issue
 ---
 
-**Planned maintenance is underway.**:
+**Planned maintenance is underway.**
 {{< track "2020-06-15 18:00:00" >}}
 
 **Planned maintenance on June 15th will cause intermittent outages**:
