@@ -3,8 +3,7 @@ title: Planned outage for all services
 date: 2020-06-15 18:00:00
 resolved: false
 resolvedWhen: 
-#severity: disrupted
-severity: notice
+severity: disrupted
 affected:
   - meta.sr.ht
   - man.sr.ht
@@ -17,6 +16,9 @@ affected:
   - dispatch.sr.ht
 section: issue
 ---
+
+**Planned maintenance is underway.**:
+{{< track "2020-06-15 18:00:00" >}}
 
 **Planned maintenance on June 15th will cause intermittent outages**:
 Planned maintenance will affect all services, causing intermittent outages that
