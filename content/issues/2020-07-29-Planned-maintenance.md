@@ -5,15 +5,7 @@ resolved: false
 resolvedWhen: 2020-06-15 19:07:00
 severity: notice
 affected:
-  - meta.sr.ht
-  - man.sr.ht
   - hg.sr.ht
-  - git.sr.ht
-  - todo.sr.ht
-  - builds.sr.ht
-  - paste.sr.ht
-  - lists.sr.ht
-  - dispatch.sr.ht
 section: issue
 # TODO: Plan Alpine 3.12 migration as well
 ---
