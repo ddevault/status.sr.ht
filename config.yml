@@ -120,6 +120,8 @@ params:
   systems:
     - name: git.sr.ht
       category: Uncategorized
+    - name: hg.sr.ht
+      category: Uncategorized
     - name: builds.sr.ht
       category: Uncategorized
     - name: todo.sr.ht
@@ -133,6 +135,8 @@ params:
     - name: meta.sr.ht
       category: Uncategorized
     - name: paste.sr.ht
+      category: Uncategorized
+    - name: hub.sr.ht
       category: Uncategorized
 
   # What header design should we use?
