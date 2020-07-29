@@ -10,9 +10,11 @@ section: issue
 # TODO: Plan Alpine 3.12 migration as well
 ---
 
+**Maintenance may require more time than expected**.
+{{< track "2020-07-29 17:50:00" >}}
+
 **Planned maintenance has begun**.
 {{< track "2020-07-29 17:00:00" >}}
-
 
 **Planned maintenance on July 29th will cause an hg.sr.ht outage**:
 At 17:00 UTC on July 29th, we will conduct planned maintenance on hg.sr.ht to
