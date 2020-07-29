@@ -1,14 +1,18 @@
 ---
 title: Planned outage for hg.sr.ht
 date: 2020-07-29 17:00:00
-resolved: false
-resolvedWhen: 2020-06-15 19:07:00
+resolved: true
+resolvedWhen: 2020-07-29 21:00:00
 severity: disrupted
 affected:
   - hg.sr.ht
 section: issue
 # TODO: Plan Alpine 3.12 migration as well
 ---
+
+**Maintenance complete**. Depending on how soon your DNS server picks up the
+updates, you should find service restored shortly.
+{{< track "2020-07-29 21:00:00" >}}
 
 We're still waiting on the latest data to transfer from the old server to the
 new. It is taking longer than we expected. The process is about halfway
