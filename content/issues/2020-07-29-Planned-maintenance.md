@@ -3,12 +3,16 @@ title: Planned outage for hg.sr.ht
 date: 2020-07-29 17:00:00
 resolved: false
 resolvedWhen: 2020-06-15 19:07:00
-severity: notice
+severity: disrupted
 affected:
   - hg.sr.ht
 section: issue
 # TODO: Plan Alpine 3.12 migration as well
 ---
+
+**Planned maintenance has begun**.
+{{< track "2020-07-29 17:00:00" >}}
+
 
 **Planned maintenance on July 29th will cause an hg.sr.ht outage**:
 At 17:00 UTC on July 29th, we will conduct planned maintenance on hg.sr.ht to
