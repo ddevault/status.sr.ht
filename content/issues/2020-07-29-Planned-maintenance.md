@@ -10,6 +10,11 @@ section: issue
 # TODO: Plan Alpine 3.12 migration as well
 ---
 
+We're still waiting on the latest data to transfer from the old server to the
+new. It is taking longer than we expected. The process is about halfway
+complete. We apologise for the delay.
+{{< track "2020-07-29 19:00:00" >}}
+
 **Maintenance may require more time than expected**.
 {{< track "2020-07-29 17:50:00" >}}
 
