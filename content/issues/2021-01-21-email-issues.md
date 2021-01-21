@@ -1,5 +1,5 @@
 ---
-title: Network outage
+title: Email issues
 date: 2021-01-21 19:00:00
 resolved: true
 resolvedWhen: 2021-01-21 19:45:00
