@@ -10,7 +10,7 @@ affected:
 section: issue
 ---
 
-**One of our third-party DNSBL service, SpamCop, allowed their domain to
+**One of our third-party DNSBL services, SpamCop, allowed their domain to
 expire**, presumably as a mistake, and began to return "listed" for all DNSBL
 checks. We use a DNSBL as an early rejection for spam emails, and this caused
 21 incoming emails to be wrongfully rejected. We have removed SpamCop from our
