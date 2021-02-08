@@ -3,8 +3,7 @@ title: Planned outage for all services
 date: 2021-02-08 15:00:00
 resolved: false
 resolvedWhen: 
-severity: notice
-#severity: disrupted
+severity: disrupted
 affected:
   - meta.sr.ht
   - man.sr.ht
@@ -17,6 +16,9 @@ affected:
   - dispatch.sr.ht
 section: issue
 ---
+
+**Planned maintenance is now underway**.
+{{< track "2021-02-08 15:00:00" >}}
 
 **Planned maintenance on February 8th will cause intermittent outages**:
 Planned maintenance will affect all services, causing intermittent outages that
