@@ -1,8 +1,8 @@
 ---
 title: Cryptocurrency mining attacks on builds.sr.ht
 date: 2021-04-13 11:30:00
-resolved: false
-resolvedWhen: 
+resolved: true
+resolvedWhen: 2021-05-01 00:00:00
 severity: disrupted
 affected:
   - builds.sr.ht
