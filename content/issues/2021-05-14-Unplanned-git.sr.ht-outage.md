@@ -2,7 +2,7 @@
 title: Unplanned git.sr.ht outage
 date: 2021-05-14 12:00:00
 resolved: true
-resolvedWhen: 2020-06-28 15:50:00
+resolvedWhen: 2021-05-14 15:50:00
 severity: disrupted
 affected:
   - git.sr.ht
