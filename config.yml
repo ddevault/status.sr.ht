@@ -138,6 +138,8 @@ params:
       category: Uncategorized
     - name: hub.sr.ht
       category: Uncategorized
+    - name: pages.sr.ht
+      category: Uncategorized
 
   # What header design should we use?
   #
