@@ -3,7 +3,7 @@ title: Planned outage for all services
 date: 2021-08-03 08:00:00
 resolved: false
 resolvedWhen:
-severity: notice
+severity: disrupted
 affected:
   - meta.sr.ht
   - man.sr.ht
