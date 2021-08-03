@@ -1,8 +1,8 @@
 ---
 title: Planned outage for all services
 date: 2021-08-03 08:00:00
-resolved: false
-resolvedWhen:
+resolved: true
+resolvedWhen: 2021-08-03 10:30:00
 severity: disrupted
 affected:
   - meta.sr.ht
@@ -14,6 +14,10 @@ affected:
   - lists.sr.ht
 section: issue
 ---
+
+**Maintenance complete**:
+The issue with pages.sr.ht has been resolved and all services are now available.
+{{< track "2021-08-03 10:30:00" >}}
 
 **Maintenance mostly complete but pages.sr.ht still pending**:
 We have completed maintenance on all services, which can now be expected to be
