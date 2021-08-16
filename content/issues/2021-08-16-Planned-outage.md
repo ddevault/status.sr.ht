@@ -1,8 +1,8 @@
 ---
 title: Planned outage for all services
 date: 2021-08-16 13:00:00
-resolved: false
-resolvedWhen: 
+resolved: yes
+resolvedWhen: 2021-08-16 14:20:00
 severity: disrupted
 affected:
   - meta.sr.ht
@@ -14,6 +14,11 @@ affected:
   - lists.sr.ht
 section: issue
 ---
+
+**Planned maintenance is complete**:
+We have finished upgrading all of the affected hosts and all services are
+restored to normal.
+{{< track "2021-08-16 14:20:00" >}}
 
 **Planned maintenance is ongoing**:
 Our maintenance window has opened and we have started our work.
