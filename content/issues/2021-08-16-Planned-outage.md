@@ -3,7 +3,7 @@ title: Planned outage for all services
 date: 2021-08-16 13:00:00
 resolved: false
 resolvedWhen: 
-severity: notice
+severity: disrupted
 affected:
   - meta.sr.ht
   - man.sr.ht
@@ -14,6 +14,10 @@ affected:
   - lists.sr.ht
 section: issue
 ---
+
+**Planned maintenance is ongoing**:
+Our maintenance window has opened and we have started our work.
+{{< track "2021-08-16 13:00:00" >}}
 
 **Planned maintenance on August 16th will cause intermittent outages**:
 We are planning the second (and last phase) of the maintenance which began on
